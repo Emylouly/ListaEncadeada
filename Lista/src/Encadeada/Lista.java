@@ -97,23 +97,30 @@ public class Lista {
 		this.totalElementos--;
 	}
 
-    public void removerPorPosicao(int posicao){
+    public void removerPorPosicao(int posicao) {
+	
+		Celula anterior = this.cabeca;
+		
+		if(this.totalElementos==1) {
+			removerInicio();
+		}
 
-        Celula anterior = new Celula();
+        if(posicao == totalElementos){
 
-        for(int count=0; count<posicao-1; count++){
-
-            anterior = anterior.getProxima();
+            removerFim();
 
         }
+		
+		for(int cont=0;cont<posicao-1;cont++) {
+			
+			anterior = anterior.getProxima();
+			
+		}
 
-        Celula aux = new Celula(anterior.getProxima());
-        anterior = null;
-        anterior = aux;
+        anterior.setProxima(anterior.getProxima().getProxima());
 
-        this.totalElementos--;
-
-    }
+		this.totalElementos--;
+	}
 
     public void imprimir(){
 
