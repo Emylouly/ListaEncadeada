@@ -21,6 +21,8 @@ public class Lista {
 
     }
 
+
+
     public void adicionarNoFim(String nome){
 
         Celula nova = new Celula(nome);
@@ -36,6 +38,8 @@ public class Lista {
         this.totalElementos++;
 
     }
+
+
 
     public void adiconarPorPosicao(int posicao, String nome) {
 		
@@ -59,6 +63,8 @@ public class Lista {
 
     }
 
+
+
     public void removerInicio() {
 	
         Celula aux = this.cabeca;
@@ -71,6 +77,8 @@ public class Lista {
 		
 		
 	}
+
+
 
     public void removerFim() {
 		
@@ -89,6 +97,24 @@ public class Lista {
 		this.totalElementos--;
 	}
 
+    public void removerPorPosicao(int posicao){
+
+        Celula anterior = new Celula();
+
+        for(int count=0; count<posicao-1; count++){
+
+            anterior = anterior.getProxima();
+
+        }
+
+        Celula aux = new Celula(anterior.getProxima());
+        anterior = null;
+        anterior = aux;
+
+        this.totalElementos--;
+
+    }
+
     public void imprimir(){
 
         Celula aux = this.cabeca;
@@ -101,28 +127,5 @@ public class Lista {
 
     }
 
-    public Celula getCabeca() {
-        return cabeca;
-    }
-
-    public void setCabeca(Celula cabeca) {
-        this.cabeca = cabeca;
-    }
-
-    public Celula getCauda() {
-        return cauda;
-    }
-
-    public void setCauda(Celula cauda) {
-        this.cauda = cauda;
-    }
-
-    public int getTotalElementos() {
-        return totalElementos;
-    }
-
-    public void setTotalElementos(int totalElementos) {
-        this.totalElementos = totalElementos;
-    }
 
 }
