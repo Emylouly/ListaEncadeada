@@ -1,3 +1,4 @@
+package Duplamente;
 public class Celula {
     
     private Celula proxima;

@@ -1,3 +1,4 @@
+package Duplamente;
 public class Lista {
 
     private Celula cabeca;
