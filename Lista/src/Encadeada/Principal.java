@@ -8,13 +8,13 @@ public class Principal {
         lista.adicionarNoInicio("amor");
         lista.adicionarNoInicio("Pel");
         lista.adicionarNoInicio("Emily");
-        lista.adicionarNoFim("myllena");
-        lista.adicionarNoFim("Maria");
-        lista.adicionarNoFim("erika");
+        //lista.adicionarNoFim("myllena");
+        //lista.adicionarNoFim("erika");
 
+        //lista.adicionarNoFim("Maria");
 
-        lista.adiconarPorPosicao(2, "fa");
-        lista.removerPorPosicao(4);
+        //lista.adicionarPorPosicao(2, "fa");
+        lista.removerFim();
 
 
         lista.imprimir();

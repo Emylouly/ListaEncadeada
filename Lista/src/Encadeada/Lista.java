@@ -41,7 +41,7 @@ public class Lista {
 
 
 
-    public void adiconarPorPosicao(int posicao, String nome) {
+    public void adicionarPorPosicao(int posicao, String nome) {
 		
 		Celula anterior = this.cabeca;
 		
@@ -84,9 +84,10 @@ public class Lista {
 		
 		Celula anterior = this.cabeca;
 		
-		for(int cont=0;cont<this.totalElementos-2;cont++) {
+		for(int cont=0;cont<this.totalElementos-1;cont++) {
 			
 			anterior = anterior.getProxima();
+            System.out.println(cont + " " + anterior.getElemento());
 			
 		}
 		
@@ -96,6 +97,7 @@ public class Lista {
 		
 		this.totalElementos--;
 	}
+
 
     public void removerPorPosicao(int posicao) {
 	
@@ -126,6 +128,7 @@ public class Lista {
 
 		this.totalElementos--;
 	}
+
 
     public void imprimir(){
 
