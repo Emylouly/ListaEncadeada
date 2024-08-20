@@ -52,6 +52,25 @@ public class Lista {
 
     }
 
+    public void removerNoInicio(){
+
+        Celula aux = this.cabeca.getProxima();
+        System.out.println(this.cabeca + " " + this.cabeca.getProxima());
+        this.cabeca = aux;
+
+        this.totalElementos--;
+
+    }
+
+    public void removerNoFim(){
+
+        Celula aux = this.cauda.getAnterior();
+        this.cauda = aux;
+
+        this.totalElementos--;
+
+    }
+
     public void imprimir(){
 
         Celula aux = this.cabeca;
@@ -61,30 +80,6 @@ public class Lista {
 	
 		}
 
-    }
-
-    public Celula getCabeca() {
-        return cabeca;
-    }
-
-    public void setCabeca(Celula cabeca) {
-        this.cabeca = cabeca;
-    }
-
-    public Celula getCauda() {
-        return cauda;
-    }
-
-    public void setCauda(Celula cauda) {
-        this.cauda = cauda;
-    }
-
-    public int getTotalElementos() {
-        return totalElementos;
-    }
-
-    public void setTotalElementos(int totalElementos) {
-        this.totalElementos = totalElementos;
     }
 
 }
