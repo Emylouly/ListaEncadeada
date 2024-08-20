@@ -10,12 +10,11 @@ public class Principal {
         lista.adicionarNoInicio("Emily");
         lista.adicionarNoFim("myllena");
         lista.adicionarNoFim("Maria");
-
-
         lista.adicionarNoFim("erika");
 
-        //lista.adiconarPorPosicao(2, "2412454");
-        lista.removerPorPosicao(2);
+
+        lista.adiconarPorPosicao(2, "fa");
+        lista.removerPorPosicao(4);
 
 
         lista.imprimir();

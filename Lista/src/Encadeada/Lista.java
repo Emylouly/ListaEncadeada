@@ -113,10 +113,14 @@ public class Lista {
 		
 		for(int cont=0;cont<posicao-1;cont++) {
 			
+
 			anterior = anterior.getProxima();
-			System.out.println(cont);
+			//System.out.println(cont);
+
+            System.out.println(anterior.getElemento());
 
 		}
+
 
         anterior.setProxima(anterior.getProxima().getProxima());
 
