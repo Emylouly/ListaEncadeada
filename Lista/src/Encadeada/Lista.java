@@ -114,7 +114,8 @@ public class Lista {
 		for(int cont=0;cont<posicao-1;cont++) {
 			
 			anterior = anterior.getProxima();
-			
+			System.out.println(cont);
+
 		}
 
         anterior.setProxima(anterior.getProxima().getProxima());
