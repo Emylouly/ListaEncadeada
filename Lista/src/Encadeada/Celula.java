@@ -12,6 +12,12 @@ public class Celula {
         
     }
 
+    public Celula(Object elemento){
+        
+        this.elemento = elemento;
+        
+    }
+
     public Celula(){}
 
     public Celula getProxima() {
