@@ -10,7 +10,7 @@ public class Principal {
         lista.adicionarNoInicio("Louise");
         lista.adicionarNoFim("Myllena");
         lista.adicionarNoFim("pou");
-
+        lista.adicionarPorPosicao(0, "galinha");
 
 
         lista.removerNoInicio();

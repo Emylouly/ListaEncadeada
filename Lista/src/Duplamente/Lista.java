@@ -108,6 +108,31 @@ public class Lista {
 
     }
 
+    public void adicionarPorPosicao(int posicao, String nome){
+
+        if (posicao < 0 || posicao > this.totalElementos) {
+            throw new IllegalArgumentException("Posição inválida.");
+        }
+        
+        if (posicao == 0) {
+            adicionarNoInicio(nome);
+        } else if (posicao == this.totalElementos) {
+            adicionarNoFim(nome);
+        } else {
+            Celula atual = this.cabeca;
+            for (int i = 0; i < posicao - 1; i++) {
+                atual = atual.getProxima();
+            }
+            
+            Celula nova = new Celula(atual.getProxima(), atual, nome);
+            atual.getProxima().setAnterior(nova);
+            atual.setProxima(nova);
+            this.totalElementos++;
+        }
+
+
+    }
+
     public void imprimir(){
 
         Celula aux = this.cabeca;
