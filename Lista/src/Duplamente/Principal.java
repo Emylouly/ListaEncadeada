@@ -10,12 +10,12 @@ public class Principal {
         lista.adicionarNoInicio("Louise");
         lista.adicionarNoFim("Myllena");
         lista.adicionarNoFim("pou");
-        lista.adicionarPorPosicao(0, "galinha");
+        lista.adicionarPorPosicao(1, "galinha");
+        //lista.removerPorPosicao(7);
 
-
-        lista.removerNoInicio();
+        //lista.removerNoInicio();
         
-        lista.removerNoFim();
+        //lista.removerNoFim();
 
         lista.imprimir();
 

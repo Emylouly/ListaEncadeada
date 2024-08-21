@@ -36,7 +36,9 @@ public class Lista {
 
         if(this.totalElementos==0){
 
-            adicionarNoInicio(nome);
+            Celula nova = new Celula(nome);
+            this.cabeca = nova;
+            this.cauda =nova;
 
         }
 
@@ -78,6 +80,8 @@ public class Lista {
 
         }
 
+        this.totalElementos--;
+
     }
 
     public void removerNoFim(){
@@ -106,31 +110,88 @@ public class Lista {
 
         }
 
+        this.totalElementos--;
+
     }
 
     public void adicionarPorPosicao(int posicao, String nome){
 
-        if (posicao < 0 || posicao > this.totalElementos) {
+        if(posicao < 0 || posicao > this.totalElementos){
+
             throw new IllegalArgumentException("Posição inválida.");
+
         }
         
-        if (posicao == 0) {
+        if(posicao == 0){
+
             adicionarNoInicio(nome);
-        } else if (posicao == this.totalElementos) {
+
+        }
+        
+        else if(posicao == this.totalElementos){
+
             adicionarNoFim(nome);
-        } else {
+
+        }
+        
+        else{
+
             Celula atual = this.cabeca;
-            for (int i = 0; i < posicao - 1; i++) {
+            
+            for(int i = 0; i < posicao - 1; i++){
+
                 atual = atual.getProxima();
+
             }
             
             Celula nova = new Celula(atual.getProxima(), atual, nome);
             atual.getProxima().setAnterior(nova);
             atual.setProxima(nova);
-            this.totalElementos++;
+
         }
 
+        this.totalElementos++;
 
+
+    }
+
+    public void removerPorPosicao(int posicao){
+
+        if(posicao<0 || posicao>=this.totalElementos){
+
+            throw new IllegalArgumentException("Posicao invalida");
+
+        }
+
+        if(posicao==0){
+
+            removerNoInicio();
+
+        }
+
+        else if(posicao==totalElementos){
+
+            removerNoFim();
+
+        }
+
+        else{
+
+            Celula atual = this.cabeca;
+
+            for(int count =0; count<posicao-1;count++){
+
+                atual = atual.getProxima();
+
+            }
+
+            atual.getAnterior().setProxima(atual.getProxima());
+            atual.getProxima().setAnterior(atual.getAnterior());
+
+
+        }
+
+        this.totalElementos--;
     }
 
     public void imprimir(){
