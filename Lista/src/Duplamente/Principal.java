@@ -4,13 +4,13 @@ public class Principal {
     public static void main(String[] args) {
 
         Lista lista = new Lista();
-        lista.adicionarNoFim("Vitória");
-        lista.adicionarNoFim("Myllena");
+        lista.adicionarNoFim("Vitóriat");
+        lista.adicionarNoFim("Myllenat");
 
-        lista.adicionarNoInicio("Emily");
-        lista.adicionarNoInicio("Louise");
+        lista.adicionarNoInicio("Emilyt");
+        lista.adicionarNoInicio("Louise t");
 
-        //lista.removerNoInicio();
+        lista.removerNoInicio();
         
         lista.removerNoFim();
 

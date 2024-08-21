@@ -54,20 +54,33 @@ public class Lista {
 
     public void removerNoInicio(){
 
-        Celula aux = this.cabeca.getProxima();
-        System.out.println(this.cabeca + " " + this.cabeca.getProxima());
-        this.cabeca = aux;
-
-        this.totalElementos--;
+        if (this.totalElementos == 0) {
+            System.out.println("Lista vazia. Não é possível remover.");
+        } else {
+            this.cabeca = this.cabeca.getProxima();
+            if (this.cabeca != null) {
+                this.cabeca.setAnterior(null);
+            } else {
+                this.cauda = null; // A lista ficou vazia após a remoção
+            }
+            this.totalElementos--;
+        }
 
     }
 
     public void removerNoFim(){
 
-        Celula aux = this.cauda.getAnterior();
-        this.cauda = aux;
-
-        this.totalElementos--;
+        if (this.totalElementos == 0) {
+            System.out.println("Lista vazia. Não é possível remover.");
+        } else {
+            this.cauda = this.cauda.getAnterior();
+            if (this.cauda != null) {
+                this.cauda.setProxima(null);
+            } else {
+                this.cabeca = null; // A lista ficou vazia após a remoção
+            }
+            this.totalElementos--;
+        }
 
     }
 
