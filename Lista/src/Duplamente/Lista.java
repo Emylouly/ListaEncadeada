@@ -28,8 +28,7 @@ public class Lista {
 
         }
 
-        this.totalElementos++;
-
+            this.totalElementos++;
     }
 
     public void adicionarNoFim(String nome){
@@ -50,7 +49,7 @@ public class Lista {
 
         }
 
-        this.totalElementos++;
+            this.totalElementos++;
 
     }
 
@@ -78,9 +77,10 @@ public class Lista {
 
             }
 
+            this.totalElementos--;
+
         }
 
-        this.totalElementos--;
 
     }
 
@@ -108,9 +108,12 @@ public class Lista {
 
             }
 
+            
+            this.totalElementos--;
+        
+        
         }
 
-        this.totalElementos--;
 
     }
 
@@ -136,6 +139,7 @@ public class Lista {
         
         else{
 
+            this.totalElementos++;
             Celula atual = this.cabeca;
             
             for(int i = 0; i < posicao - 1; i++){
@@ -148,9 +152,8 @@ public class Lista {
             atual.getProxima().setAnterior(nova);
             atual.setProxima(nova);
 
-        }
 
-        this.totalElementos++;
+        }
 
 
     }
@@ -160,7 +163,6 @@ public class Lista {
         if(posicao<0 || posicao>=this.totalElementos){
 
             throw new IllegalArgumentException("Posicao invalida");
-
         }
 
         if(posicao==0){
@@ -169,7 +171,7 @@ public class Lista {
 
         }
 
-        else if(posicao==totalElementos){
+        else if(posicao==this.totalElementos-1){
 
             removerNoFim();
 
@@ -179,19 +181,22 @@ public class Lista {
 
             Celula atual = this.cabeca;
 
-            for(int count =0; count<posicao-1;count++){
+            for(int count =0; count<posicao;count++){
 
                 atual = atual.getProxima();
 
             }
 
-            atual.getAnterior().setProxima(atual.getProxima());
-            atual.getProxima().setAnterior(atual.getAnterior());
+            Celula anterior = atual.getAnterior();
+            Celula proxima = atual.getProxima();
 
+            atual.getAnterior().setProxima(proxima);
+            atual.getProxima().setAnterior(anterior);
+
+            this.totalElementos--;
 
         }
 
-        this.totalElementos--;
     }
 
     public void imprimir(){
