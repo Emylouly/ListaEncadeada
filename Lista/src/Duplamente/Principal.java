@@ -15,7 +15,7 @@ public class Principal {
 
             System.out.println("\nEscolha a opção desejada: ");
             System.out.println("1- Listar elementos;\n2- Adicionar no inicio;\n3- Adicionar no fim;\n4- Remover no inicio;\n5- Remover no fim;\n6- Adicionar por posição;\n7- Remover por posição;\n8- Sair da operação.");
-            System.out.print("\nFaça a sua escolha:");
+            System.out.print("\nFaça a sua escolha: ");
             opcao=input.nextInt();
 
             switch (opcao) {
@@ -80,24 +80,6 @@ public class Principal {
 
 
         }while(opcao!=0);
-
-        //lista.adicionarNoFim("Myllena");
-        //lista.adicionarNoFim("pou");
-        //lista.adicionarNoFim("Vitória");
-        //lista.adicionarNoInicio("Louise");
-        //lista.adicionarNoInicio("Emily");
-        //lista.adicionarNoInicio("poua");
-
-        //lista.adicionarPorPosicao(0, "galinha");
-        //lista.removerPorPosicao(0);
-
-        //lista.removerNoInicio();
-        
-        //lista.removerNoFim();
-
-        //lista.imprimir();
-
-
 
     }
 
