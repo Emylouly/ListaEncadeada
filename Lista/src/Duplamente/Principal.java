@@ -76,11 +76,11 @@ public class Principal {
                 default:
 
                         System.out.println("\n\nOpção invalida!!\n\n");
-            }
+        }
 
 
         }while(opcao!=0);
 
-    }
+        }
 
 }
